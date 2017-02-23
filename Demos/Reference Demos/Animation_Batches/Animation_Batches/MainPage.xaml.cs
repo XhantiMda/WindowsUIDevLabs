@@ -13,8 +13,7 @@ all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
 THE SOFTWARE
@@ -24,8 +23,7 @@ using System;
 using System.Diagnostics;
 using System.Numerics;
 using Windows.UI;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml;using Windows.UI.Xaml.Controls;
 using Windows.UI.Composition;
 using Windows.UI.Xaml.Hosting;
 
@@ -35,8 +33,7 @@ namespace Animation_Batches
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class MainPage : Page
+    /// </summary>    public sealed partial class MainPage : Page
     {
         private Compositor _compositor;
         private ContainerVisual _mainContainer;
@@ -56,7 +53,7 @@ namespace Animation_Batches
         {
             // Intialize the Compositor
             _compositor = new Compositor();
-            _root = (ContainerVisual)ElementCompositionPreview.GetElementVisual(Container);
+            _root = ElementCompositionPreview.GetElementVisual(Container);
             _compositor = _root.Compositor;
 
             _linear = _compositor.CreateLinearEasingFunction();
